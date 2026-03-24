@@ -6,17 +6,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div style="text-align: center;">
+    <div style="text-align: center; max-width: 600px;">
         <h1>git-linear-control</h1>
         <div class="status-tag">Operational</div>
-        <br>
-        <button id="theme-toggle">Toggle Dark Mode</button>
+        
+        <div id="insight-box" style="margin-top: 30px; padding: 20px; border-top: 1px solid var(--accent-color); font-style: italic;">
+            "Loading transition data..."
+        </div>
+
+        <button id="theme-toggle" style="margin-top: 20px;">Toggle Dark Mode</button>
     </div>
+
     <footer>
         <p>Last Build: <span id="timestamp"></span></p>
     </footer>
+
     <script>
+        // 1. Timestamp
         document.getElementById('timestamp').innerText = new Date().toLocaleString();
+
+        // 2. AI Transition Hooks
+        const insights = [
+            "The best time to network was 6 months ago. The second best time is now.",
+            "Your 'PMP' isn't just a cert; it's a framework for your own career pivot.",
+            "Tech transitions aren't linear. They are iterative deployments.",
+            "AI won't replace project managers, but project managers using AI will.",
+            "Mindless Momentum: Movement creates clarity when logic stalls."
+        ];
+        
+        const randomInsight = insights[Math.floor(Math.random() * insights.length)];
+        document.getElementById('insight-box').innerText = `"${randomInsight}"`;
+
+        // 3. Theme Toggle
         const btn = document.getElementById('theme-toggle');
         btn.onclick = () => {
             const root = document.documentElement;
