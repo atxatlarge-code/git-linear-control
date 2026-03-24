@@ -9,21 +9,16 @@
 <body>
     <div class="container">
         <h1>git-linear-control</h1>
-        <div class="status-tag">SQST-2: Operational</div>
+        <div class="status-tag">Operational</div>
         <p>Terminal-first CI/CD active.</p>
     </div>
-<footer>
-    <p>Last Build: <span id="timestamp"></span></p>
-</footer>
 
-<script>
-    document.getElementById('timestamp').innerText = new Date().toLocaleString();
-</script>
+    <footer>
+        <p>Last Build: <span id="timestamp"></span></p>
+    </footer>
+
+    <script>
+        document.getElementById('timestamp').innerText = new Date().toLocaleString();
+    </script>
 </body>
 </html>
-
-footer {
-    margin-top: 2rem;
-    font-size: 0.7rem;
-    color: #64748b;
-}
