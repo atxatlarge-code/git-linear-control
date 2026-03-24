@@ -15,23 +15,15 @@
         <p>Last Build: <span id="timestamp"></span></p>
     </footer>
     <script>
+        // Restore the Timestamp function
         document.getElementById('timestamp').innerText = new Date().toLocaleString();
+        
+        // Restore the Toggle function
         const btn = document.getElementById('theme-toggle');
         btn.onclick = () => {
             const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
             document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
         };
-=======
-        <p>Terminal-first CI/CD active.</p>
-    </div>
-
-    <footer>
-        <p>Last Build: <span id="timestamp"></span></p>
-    </footer>
-
-    <script>
-        document.getElementById('timestamp').innerText = new Date().toLocaleString();
->>>>>>> origin/master
     </script>
 </body>
 </html>
