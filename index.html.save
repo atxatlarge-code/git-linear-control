@@ -21,17 +21,6 @@
             const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
             document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
         };
-=======
-        <p>Terminal-first CI/CD active.</p>
-    </div>
-
-    <footer>
-        <p>Last Build: <span id="timestamp"></span></p>
-    </footer>
-
-    <script>
-        document.getElementById('timestamp').innerText = new Date().toLocaleString();
->>>>>>> origin/master
     </script>
 </body>
 </html>
