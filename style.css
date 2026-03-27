@@ -89,3 +89,44 @@ button:hover {
 }
 
 footer { margin-top: 2rem; opacity: 0.5; font-size: 0.7rem; }
+
+
+/* --- Mobile Optimization (SQST-9) --- */
+
+/* For screens smaller than a tablet (standard mobile) */
+@media (max-width: 600px) {
+    body {
+        /* Ensure content doesn't touch the very top/bottom of the screen */
+        padding: 1.5rem; 
+        justify-content: flex-start; /* Better for scrolling if content grows */
+        padding-top: 10vh;
+    }
+
+    .container {
+        /* Reduce padding so the box can be wider on small screens */
+        padding: 1.5rem;
+        /* Allow the card to take up most of the screen width */
+        width: 90%;
+        max-width: none; 
+        border-radius: 16px; /* Slightly tighter corners for small screens */
+    }
+
+    #insight-box {
+        font-size: 1rem; /* Slightly smaller text for better fit */
+        padding: 1rem;
+        margin: 1.5rem 0;
+    }
+
+    .status-tag {
+        font-size: 0.65rem;
+        letter-spacing: 0.1rem;
+    }
+}
+
+/* Landscape Mode Fix (for when people turn their phones sideways) */
+@media (max-height: 500px) and (orientation: landscape) {
+    body {
+        min-height: auto;
+        padding: 2rem 0;
+    }
+}
